@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Santé</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Projet Santé</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="acceuil.html">Accueil</a></li>
+            <li><a href="conseils.html">Conseils</a></li>
+            <li><a href="exercice.html">Exercices</a></li>
+            <li><a href="recettes.html">Recettes</a></li>
+        </ul>
+    </nav>
+    <section>
+        <article>
+            <h2>Conseils de Santé</h2>
+            <ul>
+                <li>Mangez équilibré</li>
+                <li>Faites de l'exercice régulièrement</li>
+                <li>Restez hydraté</li>
+            </ul>
+        </article>
+
+        <aside>
+            <h2>Calcul de l'IMC</h2>
+            <label for="weight">Poids (kg): </label>
+            <input type="number" id="weight">
+            <label for="height">Taille (cm): </label>
+            <input type="number" id="height">
+            <button onclick="calculateBMI()">Calculer l'IMC</button>
+            <p id="result"></p>
+
+            <div id="quizContainer"></div>
+            <button id="submitBtn">Submit Quiz</button>
+            <p id="quizResult"></p>
+        </aside>
+
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Projet Santé. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="quiz.js"></script>
+
+</body>
+
+</html>

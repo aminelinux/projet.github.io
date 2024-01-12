@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recettes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="recettesPage">
+
+    <header>
+        <h1>Recettes pour la semaine</h1>
+    </header>
+
+    <!-- Balise Marquee pour le type de jour -->
+    <marquee behavior="scroll" direction="left">
+        <strong>Aujourd'hui:</strong> Recette légère et équilibrée
+    </marquee>
+
+    <section id="recettesContenu">
+        <!-- Liste numérotée pour la première recette -->
+        <article>
+            <h2>Recette 1 - Salade Printanière</h2>
+            <ul>
+                <li>Feuilles de laitue</li>
+                <li>Tomates cerises coupées en deux</li>
+                <li>Concombres tranchés</li>
+                <li>Avocat en dés</li>
+                <li>Graines de tournesol</li>
+                <li>Vinaigrette légère</li>
+            </ul>
+            <img src="images/Campesina-1.jpg" alt="Salade Printanière">
+        </article>
+
+        <!-- Liste non numérotée pour la deuxième recette -->
+        <article>
+            <h2>Recette 2 - Saumon Grillé</h2>
+            <ol>
+                <li>Filets de saumon frais</li>
+                <li>Mariner dans un mélange d'huile d'olive, de citron, d'ail et d'herbes</li>
+                <li>Griller pendant 10 minutes de chaque côté</li>
+                <li>Accompagner de riz complet et de légumes cuits à la vapeur</li>
+            </ol>
+        </article>
+
+        <!-- Liste de définitions pour la troisième recette -->
+        <article>
+            <h2>Recette 3 - Omelette aux Champignons</h2>
+            <dl>
+                <dt>Ingrédients:</dt>
+                <dd>Oeufs</dd>
+                <dd>Champignons tranchés</dd>
+                <dd>Fromage râpé</dd>
+                <dt>Instructions:</dt>
+                <dd>Battre les oeufs dans un bol</dd>
+                <dd>Ajouter les champignons et le fromage</dd>
+                <dd>Verser le mélange dans une poêle et cuire jusqu'à ce qu'il soit bien cuit</dd>
+            </dl>
+            
+        </article>
+
+        <!-- Liste personnalisée pour la quatrième recette -->
+        <article>
+            <h2>Recette 4 - Smoothie Vert</h2>
+            <ul>
+                <li class="ingredient">Feuilles d'épinards</li>
+                <li class="ingredient">Banane</li>
+                <li class="ingredient">Ananas</li>
+                <li class="ingredient">Yaourt grec</li>
+                <li class="instruction">Mixer tous les ingrédients jusqu'à obtention d'une texture lisse</li>
+                <li class="instruction">Servir dans un verre et déguster</li>
+            </ul>
+        </article>
+
+        <!-- Liste ordonnée pour la cinquième recette -->
+        <article>
+            <h2>Recette 5 - Poulet Rôti</h2>
+            <ol>
+                <li>Préchauffer le four à 180°C</li>
+                <li>Assaisonner le poulet avec des herbes et des épices</li>
+                <li>Placer le poulet dans un plat allant au four</li>
+                <li>Rôtir au four pendant 1 heure ou jusqu'à ce que le jus soit clair</li>
+                <li>Accompagner de légumes rôtis</li>
+            </ol>
+        </article>
+        <button class="button" onclick="returnToIndex()">Retour à l'Accueil</button>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Projet Santé. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        // Appel de la fonction showDayType uniquement sur la page "Recettes"
+        if (document.getElementById('recettesPage')) {
+            showDayType();
+        }
+    </script>
+    <script src="script.js"></script>
+
+</body>
+</html>
