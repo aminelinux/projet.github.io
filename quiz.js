@@ -17,32 +17,32 @@ var questions = [
     }
 ];
 
-// Function to generate and display the quiz
+// Fonction pour générer et afficher le quiz
 function generateQuiz() {
     var quizContainer = document.getElementById('quizContainer');
     var submitBtn = document.getElementById('submitBtn');
     var resultElement = document.getElementById('quizResult');
 
-    // Loop through the questions array
+    // Boucle à travers le tableau de questions
     for (var i = 0; i < questions.length; i++) {
         var questionDiv = document.createElement('div');
         var optionsHtml = "";
 
-        // Loop through the options for each question
+        // Boucle à travers les options pour chaque question
         for (var j = 0; j < questions[i].options.length; j++) {
             optionsHtml += '<input type="radio" name="question' + i + '" value="' + questions[i].options[j] + '"> ' + questions[i].options[j] + '<br>';
         }
 
-        // Add the question and options to the questionDiv
+        // Ajouter la question et les options à questionDiv
         questionDiv.innerHTML = '<p>' + questions[i].question + '</p>' + optionsHtml;
         quizContainer.appendChild(questionDiv);
     }
 
-    // Function to calculate and display the result when the user clicks submit
+    // Fonction pour calculer et afficher le résultat lorsque l'utilisateur clique sur Soumettre
     submitBtn.onclick = function () {
         var score = 0;
 
-        // Loop through the questions and check the selected answer
+        // Boucle à travers les questions et vérifie la réponse sélectionnée
         for (var i = 0; i < questions.length; i++) {
             var selectedOption = document.querySelector('input[name="question' + i + '"]:checked');
             
@@ -55,9 +55,8 @@ function generateQuiz() {
             }
         }
 
-        // Display the result
+        // Afficher le résultat
         resultElement.innerHTML = 'Votre score au quiz : ' + score + ' sur ' + questions.length;
 
-        // You can add more actions or feedback based on the score if needed
     };
 }
