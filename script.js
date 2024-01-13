@@ -50,17 +50,6 @@ function returnToIndex() {
     window.location.href = "index.html"; // Assurez-vous que le nom du fichier est correct
 }
 
-// Attacher l'événement au chargement de la page
-window.onload = function() {
-    // Sélectionner l'élément avec l'ID "barèmeTitle" (ajoutez cet ID à votre balise h1)
-    var titleElement = document.getElementById("barèmeTitle");
-
-    // Vérifier si l'élément existe avant d'attacher l'événement
-    if (titleElement) {
-        // Attacher l'événement au clic sur le titre
-        titleElement.addEventListener("click", showAlert);
-    }
-};
 
 function returnToIndex() {
     // Redirige vers la page d'accueil

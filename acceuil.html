@@ -131,6 +131,19 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Attacher l'événement au chargement de la page
+        window.onload = function() {
+            // Sélectionner l'élément avec l'ID "barèmeTitle"
+            var titleElement = document.getElementById("barèmeTitle");
+        
+            // Vérifier si l'élément existe avant d'attacher l'événement
+            if (titleElement) {
+                // Attacher l'événement au clic sur le titre
+                titleElement.addEventListener("click", showAlert);
+            }
+        };
+    </script>
 </body>
 
 </html>
